@@ -5,9 +5,9 @@
 package edd;
 /**
  *
- * @author Edgar
+ * @author Edgar 
  */
-public class HashTable {
+public class HashTable { 
 
     static int hashTableSize = 5000;
     static ListaHashTable hashTable[] = new ListaHashTable[hashTableSize];
@@ -54,7 +54,7 @@ public class HashTable {
     /*
     Correcion del metodo GettNodeById 
     1.- validaciones al acceso
-    2.- Condicion de comparacion
+    2.- Condicion de comparacion cambios
     */
     public NodoLista gettNodeById(String value) {
         int index = hashFunc(value);

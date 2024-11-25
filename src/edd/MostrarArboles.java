@@ -27,7 +27,7 @@ public class MostrarArboles {
 //       graph.getNode(parada).setAttribute("ui.style",
 //        "fill-color: blue;size: 40px;text-size: 16px;font: bold 16px arial;text-alignment: center;");
 
-        // Color de relleno
+        // Color de relleno a
     }
 
     public void AgregarConexion(String parada1, String parada2) {

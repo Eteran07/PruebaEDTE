@@ -6,7 +6,7 @@ package edd;
 
 /**
  *
- * @author Edgar
+ * @author Edgar 
  */
 public class ListaHashTable {
     public NodoListaHashTable head;
@@ -73,7 +73,7 @@ public class ListaHashTable {
         return head;
     }
     
-    public boolean busqueda(String val) {
+    public boolean busqueda(String val) { //genera la busqueda desde el hashS
         NodoListaHashTable aux = head;
 
         while (aux != null){

@@ -104,7 +104,7 @@ public class Tree {
         }
     }
 
-    public NodoLista findNodeById(int id, NodoLista node) {
+    public NodoLista findNodeById(int id, NodoLista node) { //encuentra los nodos por clave
         if (node == null) {
             return null;
         }

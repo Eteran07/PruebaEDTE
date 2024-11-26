@@ -16,6 +16,10 @@ import edd.MostrarArboles;
 public class Main {
 
     public static void main(String[] args) {
+        java.awt.EventQueue.invokeLater(() -> {
+            new Interfaz().setVisible(true);
+        });
+    
         
         Tree tree = new Tree();
         NodoLista nodoarbol;
@@ -94,6 +98,9 @@ public class Main {
             a = a.next;
         }
         
+        
+        
+        
         System.setProperty("org.graphstream.ui", "swing");
        MostrarArboles Arbol = new MostrarArboles();
        Arbol.mostrar(tree);
@@ -101,8 +108,12 @@ public class Main {
         //MostrarArboles Arbol2 = new MostrarArboles();
         //Arbol2.mostrarVisualAncestros(nodoarbol);
         
+        
+        
+    }
+        
     }
     
     
     
-}
+

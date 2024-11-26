@@ -9,18 +9,18 @@ package edd;
  * @author Alejandro
  */
 public class Metodos {
+    private HashTable Hast; // Tabla hash para almacenar nodos
+    private HashTable nombre; // Tabla hash para buscar personajes por nombre
 
-    private HashTable Hast;
-    private HashTable nombre;
-
+    // Constructor que inicializa la tabla hash
     public Metodos(HashTable hash) {
         this.Hast = hash;
     }
 
+    // Método para ver el registro de un personaje dado su mote
     public String verRegistro(String mote) {
         NodoLista nodo = this.Hast.gettNodeById(mote);
-        return nodo.toString();
-
+        return nodo.toString(); // Retorna la representación en cadena del nodo
     }
 
     public NodoLista[] buscarPorNombre(String nombre) {

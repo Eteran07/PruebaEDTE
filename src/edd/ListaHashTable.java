@@ -7,19 +7,25 @@ package edd;
 /**
  *
  * @author Edgar 
+ * 
+ * //Lista enlazada para el manejo de colisiones en la tabla de hash table
  */
+
+//En cada Instancia corresponde a un indice en la tabla hash almacenado nodos en otra clase auxiliar de tipo NodoListaHashTable
 public class ListaHashTable {
-    public NodoListaHashTable head;
-    public String indice;
-    public int size;
+    public NodoListaHashTable head; //cabeza de la lista enlazada
+    public String indice; //indice asociado a esta lista
+    public int size; //Tamaño de la lista
 
     public ListaHashTable () {
         head = null;
-        indice = "";
+        indice = ""; 
         size = 0;
     }
     
      
+    //permite inicializar la lista con un indice en especifico
+    
     public ListaHashTable (boolean nueva_sucursal,String new_indice) {
         head = null;
         indice = new_indice;
@@ -27,19 +33,22 @@ public class ListaHashTable {
     }
     
     public NodoListaHashTable crearNodo(String value, NodoLista nodoarbol) {
-        NodoListaHashTable nodo = new NodoListaHashTable(value,nodoarbol,null);
-        return nodo;
+        NodoListaHashTable nodo = new NodoListaHashTable(value,nodoarbol,null); //crea un nuevo nodo de tipo NodoListaHasht
+        return nodo; //retorna el nodo creado
     }
+    
+    
+    //FUNCION QUE PERMITE INSERTAR Y ASOCIAR UN NUEVO NODO EN LA LISTA
     
     public NodoListaHashTable insertar(NodoLista nodoarbol ) {
         NodoListaHashTable nodo = crearNodo((String)nodoarbol.getNombre(),nodoarbol);
         if (head==null) {
-            head = nodo;
+            head = nodo; //Si la lista esta vacia el nuevo nodo se convierte en la cabeza
         } 
         
         else {
-            NodoListaHashTable pointer = head;
-            while(pointer.next != null) {
+            NodoListaHashTable pointer = head; // si no el puntero se inicializa en la cabeza
+            while(pointer.next != null) { //Condicional que recorre la lista hasta el final e inserta un nodo al final de la misma
                 pointer = pointer.next;
             }
             pointer.next=nodo;
@@ -49,7 +58,7 @@ public class ListaHashTable {
 
     }
     
-    public NodoListaHashTable eliminar(String val) {
+    public NodoListaHashTable eliminar(String val) { //funcion que elimina el nodo en la lista enlazada
         if (head == null) return null;
 
         NodoListaHashTable deleteNode = head;

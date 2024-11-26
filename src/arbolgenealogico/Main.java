@@ -38,6 +38,10 @@ public class Main {
         System.out.println("ARBOL");
         tree.print(tree.getRoot());
         
+        
+        
+        //ejemplo de busqueda
+        
         ListaHashTable lista = tree.buscarGeneracion(1, 0, tree.getRoot(), new ListaHashTable());
         NodoListaHashTable aux = lista.head;
         while(aux!= null){

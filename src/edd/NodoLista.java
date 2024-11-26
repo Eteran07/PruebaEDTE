@@ -8,6 +8,9 @@ package edd;
  *
  * @author Alejandro
  */
+
+//se crean las caracteristicas por nombre segun se indique.
+
 public class NodoLista {
     private String nombre;
     private String mote;
@@ -69,6 +72,8 @@ public class NodoLista {
     public void setFate(String fate) {
         this.fate = fate;
     }
+    
+    //Constructores con sus atributos.
     
     public NodoLista(String element, int key, String mote, String heldTitle, String eyeColor, String hairColor, String notes, String fate) {
         this.element = element;

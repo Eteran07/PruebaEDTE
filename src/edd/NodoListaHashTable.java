@@ -8,15 +8,19 @@ package edd;
  *
  * @author Edgar
  */
+//permite el manejo de colisiones 
+// cada nodo almacena un enlace al siguiente nodo de tipo NodoLista
 public class NodoListaHashTable {
     public String val;
     public NodoListaHashTable next;
-    public NodoLista nodoarbol;
+    public NodoLista nodoarbol; //Nodo asociado formato nodolista 
+    
     public NodoListaHashTable (String val_new, NodoLista nodoarbol_new, NodoListaHashTable siguiente) {
-        val = val_new;
-        next = siguiente;
-        nodoarbol = nodoarbol_new;
+        val = val_new; // asigna el valor al nodo
+        next = siguiente; // Punto de referencia para el siguiente nodo
+        nodoarbol = nodoarbol_new; //Inicializa el nodo al tipo Nodo Lista
     }
 }
 
+ 
  
